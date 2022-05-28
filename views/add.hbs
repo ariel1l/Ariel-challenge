@@ -1,0 +1,20 @@
+<div class="container">
+   <h1>Add a product</h1>
+   <form method="POST" action="/add">
+        <div class="searchBox">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required>
+
+            <label for="price">Price</label>
+            <input type="number" name="price" id="price" required>
+            <button type="submit" id="submit">Add</button>
+        </div>
+   </form>
+   <div id="products_container">
+      <ul>
+         {{#each products}}
+         <li>{{this}}</li>
+         {{/each}}
+      </ul>
+   </div>
+</div>

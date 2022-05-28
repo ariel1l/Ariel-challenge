@@ -1,0 +1,25 @@
+<div class="container">
+   <h1>Search Products</h1>
+   <form method="GET" action="/">
+        <div class="searchBox">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+
+            <label for="price">Price</label>
+            <input type="number" name="price" id="price">
+            <button type="submit" id="submit">Search</button>
+        </div>
+   </form>
+    <table>
+            <tr>
+            <th>Name</th>
+            <th>Price</th>
+            </tr>
+        {{#each products}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.price}}</td>
+        </tr>
+        {{/each}}
+    </table>
+</div>
